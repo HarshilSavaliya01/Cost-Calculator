@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.tool {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #007bff;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 15px;
+  padding: 12px;
+  background: #e7f3ff;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.green {
+  background: #e2fbe2;
+  border-color: #28a745;
+}
+
+.inline-fields {
+  display: flex;
+  gap: 20px;
+}
+
+.inline-fields > div {
+  flex: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.pipe-cost {
+  color: #0056b3;
+  font-size: 18px;
+  margin-bottom: 10px;
+}

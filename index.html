@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pipe Calculator + Inch to MM Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Pipe Rate Calculator -->
+    <div class="tool">
+      <h2>Pipe Rate Calculator</h2>
+
+      <label for="innerDiameter">Inner Diameter (ID in mm):</label>
+      <input type="number" id="innerDiameter" placeholder="Enter inner diameter" />
+
+      <label for="pipeLength">Length of Pipe (mm):</label>
+      <input type="number" id="pipeLength" placeholder="Enter length of pipe" value="1000" />
+
+      <label for="boxLength">Length of Box (mm):</label>
+      <input type="number" id="boxLength" placeholder="Enter length of box" />
+
+      <label for="ratePerKg">Rate per KG:</label>
+      <input type="number" id="ratePerKg" placeholder="Enter rate per KG" value="65" step="0.01" />
+
+      <button onclick="calculatePipeCost()">Calculate Rate of Pipe used per Box</button>
+
+      <div id="pipeResult" class="result"></div>
+    </div>
+
+    <!-- Extra Costs (hidden until pipe cost calculated) -->
+    <div class="tool hidden" id="extraCostSection">
+      <h2>Box Extra Costs</h2>
+
+      <div class="inline-fields">
+        <div>
+          <label for="costTopBottom">Cost of Top/Bottom (for one side):</label>
+          <input type="number" id="costTopBottom" placeholder="e.g. 5" />
+        </div>
+        <div>
+          <label for="costPrintTopBottom">Print Cost of Top/Bottom (for one side):</label>
+          <input type="number" id="costPrintTopBottom" placeholder="e.g. 3" />
+        </div>
+      </div>
+
+      <label for="costLabel">Cost of Printed Label:</label>
+      <input type="number" id="costLabel" placeholder="e.g. 2" />
+
+      <label for="labourCharges">Labour Charges:</label>
+      <input type="number" id="labourCharges" placeholder="e.g. 10" />
+
+      <label for="marginPercent">Margin %:</label>
+      <input type="number" id="marginPercent" placeholder="e.g. 15" />
+
+      <button onclick="calculateFinalCost()">Calculate Final Cost & Selling Price</button>
+
+      <div id="finalResult" class="result green"></div>
+    </div>
+
+    <!-- Inch to MM Converter -->
+    <div class="tool">
+      <h2>Inch to MM Converter</h2>
+      <label for="inchInput">Enter value in inches:</label>
+      <input type="number" id="inchInput" placeholder="e.g. 2.5" />
+      <button onclick="convertInchToMM()">Convert to mm</button>
+      <div id="inchResult" class="result"></div>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
